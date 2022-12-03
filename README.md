@@ -1,42 +1,23 @@
-# Alfred Gitlab Tool
+# Alfred Requisites Generator
 
-Alfred Gitlab dashboard workflow. Navigate projects, issues, merges and todos quickly. 
+Workflow for Alfred to generate random organization or employee requisites.
 
 ## Install
 
 - Dependency [Alfred3 or Alfred4](https://www.alfredapp.com/)
-- Download [Gitlab workflow release](releases)
+- Download [Gitlab workflow release](https://github.com/Leofwin/Alfred-Requisites-Generator/releases/latest)
 - Click to install
 - Set `python2` interpreter variable. By default, it's `/usr/bin/python`.
 - Profit!
 
-### Configure
-
-- **`glurl`: Set Gitlab url.**
-
-![](./pic/glurl.png)
-
-- **`gltoken`: Set Gitlab token.**
-
-![](./pic/gltoken.png)
-
 ### Feature
 
-- **`glp`: Fuzzy search Gitlab projects.**
-
-![](./pic/glp.png)
-
-- **`glm`: Navigate Gitlab merge requests assigned to you.**
-
-![](./pic/glm.png)
-
-- **`gli`: Search Gitlab issues via API.**
-
-![](./pic/gli.png)
-
-- **`gltodo`: Open Gitlab todos in browser.**
-
-![](./pic/gltodo.png)
+- **`geninn`: Generate random organization's INN.**
+- **`geninnfl`: Generate random employee or individual businessman INN.**
+- **`genkpp`: Generate random organization's KPP.**
+- **`gensnils`: Generate random employee's SNILS.**
+- **`genogrn`: Generate random organization's OGRN.**
+- **`genguid`: Generate random GUID (UUIDv4).**
 
 ## Question
 
@@ -44,9 +25,4 @@ All pull requests, issues and ideas are welcome.
 
 ## Thanks
 
-- Forked from [wangshub/Alfred-Gitlab-Tool](https://github.com/wangshub/Alfred-Gitlab-Tool).
 - Python libary [alfred-workflow](http://www.deanishe.net/alfred-workflow/).
-
-## License
-
-MIT @ [github/Leofwin](https://github.com/Leofwin)

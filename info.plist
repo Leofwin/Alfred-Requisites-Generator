@@ -494,7 +494,12 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>geninn: Generate random organization's INN.
+geninnfl: Generate random employee or individual businessman INN.
+genkpp: Generate random organization's KPP.
+gensnils: Generate random employee's SNILS.
+genogrn: Generate random organization's OGRN.
+genguid: Generate random GUID (UUIDv4).</string>
 	<key>uidata</key>
 	<dict>
 		<key>03D6214D-B9D5-48A8-AF61-BA5EF7B6444A</key>
@@ -599,11 +604,11 @@
 	<key>variables</key>
 	<dict>
 		<key>python2</key>
-		<string>/Users/leofwin/.pyenv/shims/python2</string>
+		<string>/usr/bin/python</string>
 	</dict>
 	<key>version</key>
 	<string>1.0.0</string>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://github.com/Leofwin/Alfred-Requisites-Generator</string>
 </dict>
 </plist>
