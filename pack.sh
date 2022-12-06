@@ -3,4 +3,4 @@
 PACKAGE_NAME=Requisites-Generator
 VERSION=$(plutil -extract version raw -o - src/info.plist)
 
-zip -r $PACKAGE_NAME.$VERSION.alfredworkflow src
+ditto -ck src "$PACKAGE_NAME.$VERSION.alfredworkflow"
