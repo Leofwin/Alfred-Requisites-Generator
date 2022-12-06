@@ -18,6 +18,7 @@ Workflow for Alfred to generate random organization or employee requisites.
 - **`gensnils`: Generate random employee's SNILS.**
 - **`genogrn`: Generate random organization's OGRN.**
 - **`genguid`: Generate random GUID (UUIDv4).**
+- **`genogrnip`: Generate IP's OGRN.**
 
 ## Question
 
