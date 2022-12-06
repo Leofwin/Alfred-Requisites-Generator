@@ -6,6 +6,7 @@ INN_UL_LENGTH = 10
 INN_FL_LENGTH = 12
 KPP_LENGTH = 9
 OGRN_LENGTH = 13
+OGRNIP_LENGTH = 15
 SNILS_LENGTH = 11
 
 INN_UL_CONTROL = (2, 4, 10 ,3, 5, 9, 4, 6, 8)
@@ -16,6 +17,9 @@ INN_FL_CONTROL = (
 
 def _get_random_digits(count):
     return [randint(0, 9) for _ in range(count)]
+
+def _make_int(digits):
+    return int("".join(map(str, digits)))
 
 def _get_random_from_aplhabet(alphabet, count):
     return [alphabet[randint(0, len(alphabet) - 1)] for _ in range(count)]
@@ -47,8 +51,15 @@ def get_random_kpp():
 
 def get_random_ogrn():
     values = _get_random_digits(OGRN_LENGTH - 1)
-    value = int("".join(map(str, values)))
+    value = _make_int(values)
     check_sum = (value % 11) % 10
+    values += [check_sum]
+    return "".join(map(str, values))
+
+def get_random_ogrnip():
+    values = _get_random_digits(OGRNIP_LENGTH - 1)
+    value = _make_int(values)
+    check_sum = (value % 13) % 10
     values += [check_sum]
     return "".join(map(str, values))
 
