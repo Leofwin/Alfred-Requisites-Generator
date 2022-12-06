@@ -4,10 +4,21 @@
 <dict>
 	<key>bundleid</key>
 	<string></string>
-	<key>category</key>
-	<string>Tools</string>
 	<key>connections</key>
 	<dict>
+		<key>02553AE7-072D-426A-9B6E-F0EA56C5E20D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2D7DE634-E262-4225-94A5-9437B4EB7DA6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>03D6214D-B9D5-48A8-AF61-BA5EF7B6444A</key>
 		<array>
 			<dict>
@@ -164,6 +175,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>F42163C1-C75F-489F-8059-C77F4C49EFFB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>02553AE7-072D-426A-9B6E-F0EA56C5E20D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>F86B9687-8B14-4859-A51B-040705769C9C</key>
 		<array>
 			<dict>
@@ -196,7 +220,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>$python2 main.py --ogrn</string>
+				<string>echo -n $($python2 main.py --ogrn)</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -208,6 +232,50 @@
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>BB832D54-0477-4F20-BBC6-80D76A59AF7A</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>genogrnip</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Random OGRN IP</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>F42163C1-C75F-489F-8059-C77F4C49EFFB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>echo -n $($python2 main.py --ogrnip)</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>02553AE7-072D-426A-9B6E-F0EA56C5E20D</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -240,7 +308,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>$python2 main.py --snils</string>
+				<string>echo -n $($python2 main.py --snils)</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -284,7 +352,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>$python2 main.py --guid</string>
+				<string>echo -n $($python2 main.py --guid)</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -319,6 +387,94 @@
 			<string>F1DC5DF7-1835-4D95-8D2D-D4769F9AB9DC</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>geninn</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Random INN UL</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>BF69707A-300E-42D7-895D-6D44BAA1A12C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>echo -n $($python2 main.py --inn)</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>E69E38A0-2179-46F0-981F-E26C2319DF9B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>geninnfl</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Random INN FL</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>21B150A9-FD66-48EE-95D3-8C481AFAAE9E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>echo -n $($python2 main.py --innfl)</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>BC484347-7B18-4075-8443-7A0A8CE638CF</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -363,100 +519,12 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>geninn</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Random INN UL</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>BF69707A-300E-42D7-895D-6D44BAA1A12C</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>$python2 main.py --inn</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>5</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>E69E38A0-2179-46F0-981F-E26C2319DF9B</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>geninnfl</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Random INN FL</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>21B150A9-FD66-48EE-95D3-8C481AFAAE9E</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>$python2 main.py --innfl</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>5</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>BC484347-7B18-4075-8443-7A0A8CE638CF</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>$python2 main.py --kpp</string>
+				<string>echo -n $($python2 main.py --kpp)</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -499,104 +567,119 @@ geninnfl: Generate random employee or individual businessman INN.
 genkpp: Generate random organization's KPP.
 gensnils: Generate random employee's SNILS.
 genogrn: Generate random organization's OGRN.
-genguid: Generate random GUID (UUIDv4).</string>
+genguid: Generate random GUID (UUIDv4).
+genogrnip: Generate random IP's OGRN.</string>
 	<key>uidata</key>
 	<dict>
+		<key>02553AE7-072D-426A-9B6E-F0EA56C5E20D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>535</integer>
+			<key>ypos</key>
+			<integer>10</integer>
+		</dict>
 		<key>03D6214D-B9D5-48A8-AF61-BA5EF7B6444A</key>
 		<dict>
 			<key>xpos</key>
-			<integer>105</integer>
+			<integer>15</integer>
 			<key>ypos</key>
 			<integer>10</integer>
 		</dict>
 		<key>126A2E8D-125C-4127-8039-132AE1C6E5AA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>280</integer>
+			<integer>180</integer>
 			<key>ypos</key>
 			<integer>560</integer>
 		</dict>
 		<key>21B150A9-FD66-48EE-95D3-8C481AFAAE9E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>105</integer>
+			<integer>15</integer>
 			<key>ypos</key>
 			<integer>450</integer>
 		</dict>
 		<key>2D7DE634-E262-4225-94A5-9437B4EB7DA6</key>
 		<dict>
 			<key>xpos</key>
-			<integer>475</integer>
+			<integer>560</integer>
 			<key>ypos</key>
-			<integer>285</integer>
+			<integer>540</integer>
 		</dict>
 		<key>650F097C-4C26-4884-92B1-127EB0CBF10A</key>
 		<dict>
 			<key>xpos</key>
-			<integer>645</integer>
+			<integer>705</integer>
 			<key>ypos</key>
-			<integer>285</integer>
+			<integer>540</integer>
 		</dict>
 		<key>7717D4FD-945E-489D-85D2-F164A9317BB3</key>
 		<dict>
 			<key>xpos</key>
-			<integer>280</integer>
+			<integer>180</integer>
 			<key>ypos</key>
 			<integer>230</integer>
 		</dict>
 		<key>9C459046-55C4-41EA-A7F7-DD358199C7EC</key>
 		<dict>
 			<key>xpos</key>
-			<integer>280</integer>
+			<integer>180</integer>
 			<key>ypos</key>
 			<integer>120</integer>
 		</dict>
 		<key>BB832D54-0477-4F20-BBC6-80D76A59AF7A</key>
 		<dict>
 			<key>xpos</key>
-			<integer>280</integer>
+			<integer>180</integer>
 			<key>ypos</key>
 			<integer>10</integer>
 		</dict>
 		<key>BC484347-7B18-4075-8443-7A0A8CE638CF</key>
 		<dict>
 			<key>xpos</key>
-			<integer>280</integer>
+			<integer>180</integer>
 			<key>ypos</key>
 			<integer>450</integer>
 		</dict>
 		<key>BF69707A-300E-42D7-895D-6D44BAA1A12C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>105</integer>
+			<integer>15</integer>
 			<key>ypos</key>
 			<integer>340</integer>
 		</dict>
 		<key>C9B4F4D8-7EA0-4015-8D75-7A5179DE2AFA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>105</integer>
+			<integer>15</integer>
 			<key>ypos</key>
 			<integer>560</integer>
 		</dict>
 		<key>E69E38A0-2179-46F0-981F-E26C2319DF9B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>280</integer>
+			<integer>180</integer>
 			<key>ypos</key>
 			<integer>340</integer>
 		</dict>
 		<key>F1DC5DF7-1835-4D95-8D2D-D4769F9AB9DC</key>
 		<dict>
 			<key>xpos</key>
-			<integer>105</integer>
+			<integer>15</integer>
 			<key>ypos</key>
 			<integer>230</integer>
+		</dict>
+		<key>F42163C1-C75F-489F-8059-C77F4C49EFFB</key>
+		<dict>
+			<key>xpos</key>
+			<integer>385</integer>
+			<key>ypos</key>
+			<integer>10</integer>
 		</dict>
 		<key>F86B9687-8B14-4859-A51B-040705769C9C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>105</integer>
+			<integer>15</integer>
 			<key>ypos</key>
 			<integer>120</integer>
 		</dict>
@@ -606,6 +689,8 @@ genguid: Generate random GUID (UUIDv4).</string>
 		<key>python2</key>
 		<string>/usr/bin/python</string>
 	</dict>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
 	<string>1.1.0</string>
 	<key>webaddress</key>
