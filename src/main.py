@@ -2,15 +2,24 @@
 import sys
 import argparse
 
-from workflow import Workflow3, web, PasswordNotFound
-from generator import get_raddom_inn_fl, get_random_inn_ul, get_random_kpp, get_random_ogrn, get_random_snils, get_random_guid
+from workflow import Workflow3
+from generator import (
+    get_raddom_inn_fl,
+    get_random_inn_ul,
+    get_random_kpp,
+    get_random_ogrn,
+    get_random_snils,
+    get_random_guid,
+    get_random_ogrnip
+)
 
-log = None
+LOG = None
+
 
 def log_result(f):
     def wrapped(*args, **kwargs):
         res = f(*args, **kwargs)
-        log.info("Returning result is {0}".format(res))
+        LOG.info("Returning result is %s", res)
         return res
     
     return wrapped
@@ -28,6 +37,8 @@ def get_result(args):
         return get_random_kpp()
     if args.guid:
         return get_random_guid()
+    if args.ogrnip:
+        return get_random_ogrnip()
     return None
 
 @log_result
@@ -38,10 +49,11 @@ def main(wf):
     parser.add_argument('--innfl', dest='innfl', action='store_true', default=False)
     parser.add_argument('--snils', dest='snils', action='store_true', default=False)
     parser.add_argument('--ogrn', dest='ogrn', action='store_true', default=False)
+    parser.add_argument('--ogrnip', dest='ogrnip', action='store_true', default=False)
     parser.add_argument('--kpp', dest='kpp', action='store_true', default=False)
     parser.add_argument('--guid', dest='guid', action='store_true', default=False)
     args = parser.parse_args(wf.args)
-    log.info(args)
+    LOG.info(args)
 
     res = get_result(args)
     print(res)
@@ -50,5 +62,5 @@ def main(wf):
 
 if __name__ == u"__main__":
     wf = Workflow3()
-    log = wf.logger
+    LOG = wf.logger
     sys.exit(wf.run(main))
