@@ -1,3 +1,6 @@
-!#/bin/bash
+#!/bin/bash
 
-zip -r Requisites-Generator.1.1.0.alfredworkflow src
+PACKAGE_NAME=Requisites-Generator
+VERSION=$(plutil -extract version raw -o - src/info.plist)
+
+zip -r $PACKAGE_NAME.$VERSION.alfredworkflow src
