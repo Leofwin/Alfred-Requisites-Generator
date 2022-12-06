@@ -1,5 +1,4 @@
 from random import randint
-import string
 import uuid
 
 INN_UL_LENGTH = 10
@@ -9,7 +8,7 @@ OGRN_LENGTH = 13
 OGRNIP_LENGTH = 15
 SNILS_LENGTH = 11
 
-INN_UL_CONTROL = (2, 4, 10 ,3, 5, 9, 4, 6, 8)
+INN_UL_CONTROL = (2, 4, 10, 3, 5, 9, 4, 6, 8)
 INN_FL_CONTROL = (
     (7, 2, 4, 10, 3, 5, 9, 4, 6, 8),
     (3, 7, 2, 4, 10, 3, 5, 9, 4, 6, 8),
@@ -41,13 +40,6 @@ def get_raddom_inn_fl():
 def get_random_kpp():
     # simple realization without A-Z letters at 5, 6 position
     return "".join([str(x) for x in _get_random_digits(KPP_LENGTH)])
-
-    first = _get_random_from_aplhabet(string.digits, 4)
-    alphabet = string.ascii_uppercase + string.digits
-    second = _get_random_from_aplhabet(alphabet, 2)
-    third = _get_random_from_aplhabet(string.digits, 3)
-
-    return "".join(first + second + third)
 
 def get_random_ogrn():
     values = _get_random_digits(OGRN_LENGTH - 1)
